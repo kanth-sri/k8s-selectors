@@ -23,4 +23,7 @@ spec:
             operator: In
             values:
             - expense
-        topologyKey: topology.kubernetes.io/zone
+        topologyKey: topology.kubernetes.io/zone 
+  containers:
+  - name: nginx
+    image: nginx 
