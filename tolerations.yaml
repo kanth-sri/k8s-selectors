@@ -7,7 +7,9 @@ metadata:
 spec:
   containers:
   - name: nginx
-    image: nginx  
+    image: nginx
+  nodeSelector:
+    hardware: "gpu"  
   tolerations:
   - key: "hardware"
     operator: "Equal"
