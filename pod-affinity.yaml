@@ -36,8 +36,8 @@ metadata:
 spec:
   affinity:
     podAntiAffinity:
-      requiredDuringSchedulingIgnoredDuringExecution:
-      #- weight: 100
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - weight: 100
         podAffinityTerm:
           labelSelector:
             matchExpressions:
