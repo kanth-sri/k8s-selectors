@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-1
+  labels:
+    project: expense
+spec:
+  containers:
+  - name: nginx
+    image: nginx 
+---
+# apiVersion: v1
+# kind: Pod
+# metadata:
+#   name: nginx-2
+# spec:
+#   affinity:
+#     podAffinity:
+#       requiredDuringSchedulingIgnoredDuringExecution:
+#       - labelSelector:
+#           matchExpressions:
+#           - key: project
+#             operator: In
+#             values:
+#             - expense
+#         topologyKey: topology.kubernetes.io/zone
